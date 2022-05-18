@@ -43,11 +43,8 @@ public class FinalAssignment {
         flipt.checkForPIN(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        String data = driver.findElement(By.xpath("//div[@class=\"_2418kt\"]/ul")).getText();
-        System.out.println(data);
-
         ExportData exp=new ExportData();
-        exp.excel(data);
+        exp.excel(driver);
 
 
 
